@@ -38,6 +38,8 @@ RUN apt install -y \
   echo "satoshi" > /root/regtest-data/KEYS
 
 COPY run_regtest_app.sh run_bitcoind_service.sh install_leveldb.sh ./
+COPY bitcoin.conf ./.bitcoin/bitcoin.conf
+
 
 RUN chmod +x install_leveldb.sh && \
   chmod +x run_bitcoind_service.sh && \

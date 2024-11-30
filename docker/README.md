@@ -19,6 +19,8 @@ the following command.
 
 ```bash
 docker run -d -p 8080:8080 regtest-server
+# docker run -d -p 8080:8080 -p 18443:18443 regtest-server
+
 ```
 
 ## Docker Hub
