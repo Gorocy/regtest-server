@@ -21,10 +21,10 @@ if (!process.env.RPCUSER) {
 } else {
   console.log(process.env.RPCUSER);
 }
-if (!process.env.PASSWORD) {
+if (!process.env.RPCPASSWORD) {
   console.log(`PASSWORD is deprecated)`);
 } else {
-  console.log(process.env.PASSWORD);
+  console.log(process.env.RPCPASSWORD);
 }
 
 if (!process.env.RPC) {
@@ -46,7 +46,7 @@ if (!process.env.RPCCONCURRENT) {
 }
 
 module.exports = require("yajrpc/qup")({
-  url: process.env.RPC || "http://localhost:8332",
+  url: process.env.RPC || "http://localhost:18443",
   auth: auth,
   batch: process.env.RPCBATCHSIZE || 500,
   concurrent: process.env.RPCCONCURRENT || 16,
